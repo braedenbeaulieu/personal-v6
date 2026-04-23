@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content'
+import SectionHeading from '../ui/SectionHeading.astro'
+import BlogCard from '../ui/BlogCard.astro'
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft)
+const posts = allPosts
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .slice(0, 3)
+---
+
+<section id="blog-preview" class="py-24 md:py-32 border-t border-border">
+  <div class="section-container">
+    <div class="flex items-end justify-between mb-12 md:mb-16 gap-4">
+      <SectionHeading label="04 / Writing" heading="Latest posts" />
+      <a
+        href="/blog"
+        class="shrink-0 text-sm font-semibold text-accent hover:text-highlight transition-colors duration-200 mb-1"
+      >
+        All posts →
+      </a>
+    </div>
+
+    {posts.length > 0 ? (
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.map((post) => (
+          <BlogCard post={post} />
+        ))}
+      </div>
+    ) : (
+      <div class="border border-dashed border-border rounded-2xl p-16 text-center">
+        <p class="text-muted text-sm">Posts coming soon.</p>
+      </div>
+    )}
+  </div>
+</section>

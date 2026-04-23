@@ -1,0 +1,13 @@
+---
+interface Props {
+  label: string
+  heading: string
+}
+
+const { label, heading } = Astro.props
+---
+
+<div class="mb-12 md:mb-16">
+  <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4">{label}</p>
+  <h2 class="heading-text text-text">{heading}</h2>
+</div>

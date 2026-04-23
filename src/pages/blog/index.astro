@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogCard from '../../components/ui/BlogCard.astro'
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft)
+const posts = allPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+---
+
+<BaseLayout
+  title="Blog — Braeden Beaulieu"
+  description="Writing about web development, WordPress, Vue, Astro, and performance."
+>
+  <div class="section-container py-24 md:py-32">
+    <div class="mb-12 md:mb-16">
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4">Writing</p>
+      <h1 class="heading-text text-text">All Posts</h1>
+    </div>
+
+    {posts.length > 0 ? (
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.map((post) => (
+          <BlogCard post={post} />
+        ))}
+      </div>
+    ) : (
+      <div class="border border-dashed border-border rounded-2xl p-24 text-center">
+        <p class="text-muted">No posts yet — check back soon.</p>
+      </div>
+    )}
+  </div>
+</BaseLayout>

@@ -1,0 +1,19 @@
+---
+interface Props {
+  tag: string
+  variant?: 'default' | 'accent'
+}
+
+const { tag, variant = 'default' } = Astro.props
+---
+
+<span
+  class:list={[
+    'inline-block text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded border transition-colors duration-200',
+    variant === 'accent'
+      ? 'border-accent/40 text-accent bg-accent/5'
+      : 'border-border text-muted bg-surface',
+  ]}
+>
+  {tag}
+</span>

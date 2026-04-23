@@ -1,0 +1,81 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro'
+
+interface Role {
+  company: string
+  title: string
+  period: string
+  location: string
+  description: string
+  highlights: string[]
+}
+
+const roles: Role[] = [
+  {
+    company: 'Freelance',
+    title: 'Full-Stack Developer',
+    period: '2020 – Present',
+    location: 'Remote',
+    description: 'Building custom WordPress solutions, Vue/Nuxt applications, and high-performance static sites for clients across various industries.',
+    highlights: [
+      'Delivered custom WordPress themes and plugins for marketing agencies and nonprofits',
+      'Built GiveWP and WooCommerce integrations for donation and e-commerce platforms',
+      'Migrated legacy sites to Astro and Nuxt for significant performance gains',
+      'Set up Cloudflare-based deployment pipelines with automated builds',
+    ],
+  },
+  // Add more roles here as needed
+]
+---
+
+<section id="experience" class="py-24 md:py-32 border-t border-border">
+  <div class="section-container">
+    <SectionHeading label="03 / Experience" heading="Where I've worked" />
+
+    <div class="relative">
+      <!-- Timeline line -->
+      <div class="absolute left-0 top-0 bottom-0 w-px bg-border hidden md:block" aria-hidden="true"></div>
+
+      <div class="flex flex-col gap-12 md:gap-16">
+        {roles.map((role, i) => (
+          <div class="relative md:pl-12">
+            <!-- Timeline dot -->
+            <div
+              class="absolute left-0 top-1 -translate-x-1/2 w-3 h-3 rounded-full bg-accent border-2 border-bg hidden md:block"
+              aria-hidden="true"
+            ></div>
+
+            <div class="grid md:grid-cols-[200px_1fr] gap-4 md:gap-10">
+              <!-- Date + Company -->
+              <div>
+                <p class="text-xs font-bold uppercase tracking-[0.15em] text-muted mb-1">
+                  {role.period}
+                </p>
+                <p class="text-sm text-muted">{role.location}</p>
+              </div>
+
+              <!-- Role details -->
+              <div>
+                <h3 class="text-xl font-bold text-text tracking-tight mb-0.5">
+                  {role.title}
+                </h3>
+                <p class="text-accent font-semibold text-sm mb-3">{role.company}</p>
+                <p class="text-muted text-[0.9375rem] leading-relaxed mb-4">
+                  {role.description}
+                </p>
+                <ul class="space-y-2">
+                  {role.highlights.map((highlight) => (
+                    <li class="flex gap-3 text-sm text-muted/80 leading-relaxed">
+                      <span class="text-accent mt-0.5 shrink-0" aria-hidden="true">▸</span>
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://braedenbeaulieu.com/sitemap-index.xml

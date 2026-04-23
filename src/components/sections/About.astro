@@ -1,0 +1,69 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro'
+import TechTag from '../ui/TechTag.astro'
+
+const technologies = [
+  'JavaScript',
+  'TypeScript',
+  'PHP',
+  'WordPress',
+  'Vue',
+  'Nuxt',
+  'Astro',
+  'Tailwind CSS',
+  'Gravity Forms',
+  'WooCommerce',
+  'GiveWP',
+  'MySQL',
+  'REST API',
+  'Git',
+  'Cloudflare',
+  'Node.js',
+]
+---
+
+<section id="about" class="py-24 md:py-32 border-t border-border">
+  <div class="section-container">
+    <SectionHeading label="02 / About" heading="A bit about me" />
+
+    <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+      <!-- Bio -->
+      <div class="space-y-5 text-[1.0625rem] leading-relaxed">
+        <p class="text-text/85">
+          I work on a WordPress-exclusive web team building complex, fully custom sites for
+          clients — custom themes built from scratch, bespoke plugins, and deep integrations
+          with tools like Gravity Forms, WooCommerce, and GiveWP. No page builders, no shortcuts.
+        </p>
+        <p class="text-text/85">
+          Outside of work, I keep up with modern frameworks for the joy of it. Vue, Nuxt, Astro,
+          Cloudflare Pages — hobby projects that keep my perspective sharp and my skills current
+          with where the web is heading.
+        </p>
+        <p class="text-text/85">
+          I care about code that's maintainable and readable, whatever the stack — and I'm drawn
+          to the craft of building things that are genuinely fast and well-considered.
+        </p>
+        <div class="pt-4">
+          <a
+            href="mailto:hello@braedenbeaulieu.com"
+            class="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:text-highlight transition-colors duration-200"
+          >
+            Let's work together →
+          </a>
+        </div>
+      </div>
+
+      <!-- Tech grid -->
+      <div>
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-muted mb-6">
+          Technologies
+        </p>
+        <div class="flex flex-wrap gap-2">
+          {technologies.map((tech) => (
+            <TechTag tag={tech} variant="accent" />
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
