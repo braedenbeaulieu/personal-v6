@@ -93,6 +93,15 @@
   .fade-up-delay-1 { animation-delay: 0.1s; }
   .fade-up-delay-2 { animation-delay: 0.2s; }
   .fade-up-delay-3 { animation-delay: 0.3s; }
+
+  .soft-pulse {
+    animation: softPulse 9s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+
+  .soft-pulse-slow { animation-duration: 12s; }
+  .soft-pulse-delay-1 { animation-delay: -2.5s; }
+  .soft-pulse-delay-2 { animation-delay: -6s; }
 }
 
 @keyframes fadeUp {
@@ -103,5 +112,22 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes softPulse {
+  0%, 100% {
+    transform: translateZ(0) scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateZ(0) scale(1.12);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .soft-pulse {
+    animation: none;
   }
 }
