@@ -3,7 +3,7 @@ title: Building a Portfolio with Astro 5 and Tailwind CSS v4
 description: How I migrated from a Nuxt-based portfolio to Astro 5 and hit a 100 Lighthouse performance score — and what changed with Tailwind v4's new approach.
 pubDate: 2025-04-20
 tags: [Astro, Tailwind CSS, Performance, Portfolio]
-draft: false
+draft: true
 ---
 
 ## Why Astro?
@@ -20,7 +20,7 @@ The new v4 approach is a significant departure. Gone is `tailwind.config.js`. Go
 @import "tailwindcss";
 
 @theme {
-  --color-accent: #f97316;
+  --color-accent: #da4141;
   --font-sans: 'Inter Variable', sans-serif;
 }
 ```
