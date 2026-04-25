@@ -3,15 +3,15 @@ import SectionHeading from '../ui/SectionHeading.astro'
 import TechTag from '../ui/TechTag.astro'
 
 const technologies = [
+  'WordPress',
+  'PHP',
+  'SCSS',
   'JavaScript',
   'TypeScript',
   'Vue',
   'Nuxt',
   'Astro',
   'Tailwind CSS',
-  'SCSS',
-  'PHP',
-  'WordPress'
 ]
 ---
 
@@ -35,14 +35,19 @@ const technologies = [
           I care about code that's maintainable and readable, whatever the stack — and I'm drawn
           to the craft of building things that are genuinely fast, accessible and well-considered.
         </p>
-        <div class="pt-4">
-          <a
-            href="mailto:hello@braedenbeaulieu.com"
-            class="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:text-highlight transition-colors duration-200"
-          >
-            Let's work together →
-          </a>
-        </div>
+        {
+          // hiding this for now, no need for it
+          false && (
+            <div class="pt-4">
+              <a
+                href="mailto:hello@braedenbeaulieu.com"
+                class="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:text-highlight transition-colors duration-200"
+              >
+                Let's work together →
+              </a>
+            </div>
+          )
+        }
       </div>
 
       <!-- Tech grid -->
