@@ -8,11 +8,10 @@ const projects = defineCollection({
     title: z.string(),
     description: z.string(),
     screenshot: image(),
-    screenshotAlt: z.string(),
     tags: z.array(z.string()),
     githubUrl: z.url().optional(),
     liveUrl: z.url().optional(),
-    featured: z.boolean().default(false),
+    draft: z.boolean().default(false),
     order: z.number().default(99),
   })
 })

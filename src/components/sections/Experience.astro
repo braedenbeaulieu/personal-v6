@@ -19,10 +19,11 @@ const roles: Role[] = [
     description: 'Designing and developing scalable, custom WordPress solutions for clients across diverse industries, with a focus on performance, maintainability, and tailored business functionality. Collaborate closely with designers, project managers, and stakeholders to translate requirements into robust full-stack implementations.',
     highlights: [
       'Architected and delivered custom WordPress themes and plugins for marketing agencies, nonprofits, and small-to-mid-sized businesses, improving site performance, flexibility, and user experience',
-      'Developed and extended integrations with GiveWP and WooCommerce, enabling advanced donation workflows, subscription models, and e-commerce functionality',
+      'Developed and extended integrations with GiveWP and WooCommerce, enabling advanced donation workflows and e-commerce functionality',
       'Diagnosed and rehabilitated legacy or abandoned WordPress projects, resolving technical debt, security vulnerabilities, and performance bottlenecks',
       'Implemented custom REST API endpoints and third-party integrations to connect WordPress platforms with external services and CRMs',
-      'Optimized frontend performance and accessibility using modern JavaScript, CSS, and best practices (Core Web Vitals, responsive design, etc.)',
+      'Championed web accessibility (WCAG 2.1 AA) across projects — conducting audits, implementing semantic HTML and ARIA patterns, and ensuring keyboard and screen reader compatibility',
+      'Optimized frontend performance using modern JavaScript, CSS, and best practices (Core Web Vitals, responsive design, Lighthouse audits)',
     ],
   },
   {
@@ -42,9 +43,9 @@ const roles: Role[] = [
 ]
 ---
 
-<section id="experience" class="py-24 md:py-32 border-t border-border">
+<section id="experience" class="py-24 md:py-32 border-t border-border" aria-labelledby="experience-heading">
   <div class="section-container">
-    <SectionHeading label="03 / Experience" heading="Where I've worked" />
+    <SectionHeading label="03 / Experience" heading="Where I've worked" headingId="experience-heading" />
 
     <div class="relative">
       <!-- Timeline line -->
@@ -52,7 +53,7 @@ const roles: Role[] = [
 
       <div class="flex flex-col gap-12 md:gap-16">
         {roles.map((role, i) => (
-          <div class="relative md:pl-12">
+          <article class="relative md:pl-12" aria-label={`${role.title} at ${role.company}`}>
             <!-- Timeline dot -->
             <div
               class="absolute left-0 top-1 -translate-x-1/2 w-3 h-3 rounded-full bg-accent border-2 border-bg hidden md:block"
@@ -79,7 +80,7 @@ const roles: Role[] = [
                 </p>
                 <ul class="space-y-2">
                   {role.highlights.map((highlight) => (
-                    <li class="flex gap-3 text-sm text-muted/80 leading-relaxed">
+                    <li class="flex gap-3 text-sm text-muted leading-relaxed">
                       <span class="text-accent mt-0.5 shrink-0" aria-hidden="true">▸</span>
                       {highlight}
                     </li>
@@ -87,7 +88,7 @@ const roles: Role[] = [
                 </ul>
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </div>

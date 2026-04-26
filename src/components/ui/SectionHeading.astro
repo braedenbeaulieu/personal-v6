@@ -2,12 +2,13 @@
 interface Props {
   label: string
   heading: string
+  headingId?: string
 }
 
-const { label, heading } = Astro.props
+const { label, heading, headingId } = Astro.props
 ---
 
 <div class="mb-12 md:mb-16">
-  <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4">{label}</p>
-  <h2 class="heading-text text-text">{heading}</h2>
+  <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4" aria-hidden="true">{label}</p>
+  <h2 id={headingId} class="heading-text text-text">{heading}</h2>
 </div>

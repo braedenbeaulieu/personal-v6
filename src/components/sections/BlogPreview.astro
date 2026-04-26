@@ -9,24 +9,24 @@ const posts = allPosts
   .slice(0, 3)
 ---
 {posts.length > 0 ? (
-  <section id="blog-preview" class="py-24 md:py-32 border-t border-border">
+  <section id="blog-preview" class="py-24 md:py-32 border-t border-border" aria-labelledby="blog-heading">
     <div class="section-container">
       <div class="flex items-end justify-between mb-12 md:mb-16 gap-4">
-        <SectionHeading label="04 / Writing" heading="Latest posts" />
+        <SectionHeading label="04 / Writing" heading="Latest posts" headingId="blog-heading" />
         <a
           href="/blog"
           class="shrink-0 text-sm font-semibold text-accent hover:text-highlight transition-colors duration-200 mb-1"
         >
-          All posts →
+          All posts <span aria-hidden="true">→</span>
         </a>
       </div>
 
       {posts.length > 0 ? (
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 list-none" role="list">
           {posts.map((post) => (
-            <BlogCard post={post} />
+            <li><BlogCard post={post} /></li>
           ))}
-        </div>
+        </ul>
       ) : (
         <div class="border border-dashed border-border rounded-2xl p-16 text-center">
           <p class="text-muted text-sm">Posts coming soon.</p>

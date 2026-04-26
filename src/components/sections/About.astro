@@ -10,14 +10,15 @@ const technologies = [
   'TypeScript',
   'Vue',
   'Nuxt',
+  'React',
   'Astro',
   'Tailwind CSS',
 ]
 ---
 
-<section id="about" class="py-24 md:py-32 border-t border-border">
+<section id="about" class="py-24 md:py-32 border-t border-border" aria-labelledby="about-heading">
   <div class="section-container">
-    <SectionHeading label="02 / About" heading="A bit about me" />
+    <SectionHeading label="02 / About" heading="A bit about me" headingId="about-heading" />
 
     <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
       <!-- Bio -->
@@ -52,14 +53,14 @@ const technologies = [
 
       <!-- Tech grid -->
       <div>
-        <p class="text-xs font-bold uppercase tracking-[0.2em] text-muted mb-6">
+        <p id="tech-label" class="text-xs font-bold uppercase tracking-[0.2em] text-muted mb-6">
           Technologies
         </p>
-        <div class="flex flex-wrap gap-2">
+        <ul class="flex flex-wrap gap-2 list-none" role="list" aria-labelledby="tech-label">
           {technologies.map((tech) => (
-            <TechTag tag={tech} variant="accent" />
+            <li><TechTag tag={tech} variant="accent" /></li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   </div>

@@ -3,20 +3,20 @@ import { getCollection } from 'astro:content'
 import SectionHeading from '../ui/SectionHeading.astro'
 import ProjectCard from '../ui/ProjectCard.astro'
 
-const allProjects = await getCollection('projects')
+const allProjects = await getCollection('projects', ({ data }) => !data.draft)
 const projects = allProjects.sort((a, b) => a.data.order - b.data.order)
 ---
 
-<section id="projects" class="py-24 md:py-32">
+<section id="projects" class="py-24 md:py-32" aria-labelledby="projects-heading">
   <div class="section-container">
-    <SectionHeading label="01 / Projects" heading="Selected Work" />
+    <SectionHeading label="01 / Projects" heading="Selected Work" headingId="projects-heading" />
 
     {projects.length > 0 ? (
-      <div class="flex flex-col gap-8">
+      <ul class="flex flex-col gap-8 list-none" role="list">
         {projects.map((project) => (
-          <ProjectCard project={project} />
+          <li><ProjectCard project={project} /></li>
         ))}
-      </div>
+      </ul>
     ) : (
       <div class="border border-dashed border-border rounded-2xl p-16 text-center">
         <p class="text-muted text-sm">Projects coming soon.</p>

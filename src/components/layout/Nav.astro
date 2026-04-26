@@ -3,36 +3,38 @@ const navLinks = [
   { href: '/#projects', label: 'Projects' },
   { href: '/#about', label: 'About' },
   { href: '/#experience', label: 'Experience' },
-  { href: '/blog', label: 'Blog' },
+  // { href: '/blog', label: 'Blog' },
 ]
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 border-b border-transparent" id="site-nav">
   <div class="section-container">
-    <nav class="flex items-center justify-between h-16" aria-label="Main navigation">
+    <div class="flex items-center justify-between h-16">
       <!-- Logo -->
       <a
         href="/"
-        class="font-black text-xl tracking-tighter text-text hover:text-accent transition-colors duration-200"
+        class="font-black text-4xl tracking-tighter text-text hover:text-accent transition-colors duration-200"
         aria-label="Braeden Beaulieu — Home"
       >
         BB<span class="text-accent">.</span>
       </a>
 
       <!-- Desktop links -->
-      <ul class="hidden md:flex items-center gap-8 list-none" role="list">
-        {navLinks.map(({ href, label }) => (
-          <li>
-            <a
-              href={href}
-              class="text-sm font-medium text-muted hover:text-text transition-colors duration-200 relative group"
-            >
-              {label}
-              <span class="absolute -bottom-0.5 left-0 w-0 h-px bg-accent transition-all duration-200 group-hover:w-full"></span>
-            </a>
-          </li>
-        ))}
-      </ul>
+      <nav aria-label="Site">
+        <ul class="hidden md:flex items-center gap-8 list-none">
+          {navLinks.map(({ href, label }) => (
+            <li>
+              <a
+                href={href}
+                class="font-medium text-muted hover:text-text transition-colors duration-200 relative group"
+              >
+                {label}
+                <span class="absolute -bottom-0.5 left-0 w-0 h-px bg-accent transition-all duration-200 group-hover:w-full"></span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
       <!-- Mobile nav (no JS) -->
       <details class="md:hidden group">
@@ -76,7 +78,7 @@ const navLinks = [
           </ul>
         </div>
       </details>
-    </nav>
+    </div>
   </div>
 </header>
 
