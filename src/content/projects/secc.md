@@ -1,7 +1,7 @@
 ---
 title: South Essex Community Council
 description: Website for a not-for-profit social services organization serving families, youth, seniors, and newcomers across South Essex since 1973.
-screenshot: ../../assets/images/projects/secc.on.ca.webp
+screenshotName: secc.on.ca.webp
 tags: [WordPress]
 liveUrl: https://secc.on.ca/
 draft: false

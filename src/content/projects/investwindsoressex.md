@@ -1,7 +1,7 @@
 ---
 title: Invest Windsor-Essex
 description: Web presence for Windsor-Essex's lead economic development agency, helping businesses locate, start, expand, and invest in the region.
-screenshot: ../../assets/images/projects/investwindsoressex.com.webp
+screenshotName: investwindsoressex.com.webp
 tags: [WordPress]
 liveUrl: https://www.investwindsoressex.com/
 draft: false

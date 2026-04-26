@@ -1,7 +1,7 @@
 ---
 title: Windsor Symphony Orchestra
 description: Website for Windsor's professional symphony orchestra — connecting the community through concerts, youth orchestras, and education programs at Capitol Theatre.
-screenshot: ../../assets/images/projects/windsorsymphony.com.webp
+screenshotName: windsorsymphony.com.webp
 tags: [WordPress]
 liveUrl: https://www.windsorsymphony.com/
 draft: false

@@ -8,14 +8,16 @@ interface Props {
 }
 
 const { project } = Astro.props
-const { title, description, screenshot, tags, githubUrl, liveUrl } = project.data
+const { title, description, screenshotName, tags, githubUrl, liveUrl } = project.data
+const image_base = "https://images.braedenbeaulieu.ca";
+
 ---
 
 <article class="group grid md:grid-cols-2 gap-0 border border-border rounded-2xl overflow-hidden bg-surface hover:border-accent/30 transition-colors duration-300" aria-labelledby={`project-title-${project.id}`}>
   <!-- Screenshot -->
   <div class="relative overflow-hidden aspect-video md:aspect-auto md:min-h-64 bg-bg">
     <Image
-      src={screenshot}
+      src={`${image_base}/${screenshotName}`}
       alt={`${title} home page screenshot`}
       width={1200}
       height={675}

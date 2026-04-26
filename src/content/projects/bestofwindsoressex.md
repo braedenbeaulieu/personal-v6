@@ -1,7 +1,7 @@
 ---
 title: Best of Windsor-Essex
 description: Annual community awards platform celebrating the best attractions, businesses, and experiences in Windsor-Essex as voted on by the public.
-screenshot: ../../assets/images/projects/bestofwindsoressex.ca.webp
+screenshotName: bestofwindsoressex.ca.webp
 tags: [WordPress]
 liveUrl: https://www.bestofwindsoressex.ca/
 draft: false
