@@ -102,6 +102,32 @@
   .soft-pulse-slow { animation-duration: 12s; }
   .soft-pulse-delay-1 { animation-delay: -2.5s; }
   .soft-pulse-delay-2 { animation-delay: -6s; }
+
+  .letter-light-up {
+    --delay: 1.25;
+    animation: letterLightUp 1s linear(0 0%, 0.99 0.28%, 1 100%) forwards;
+    /* animation: letterLightUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; */
+  }
+
+  /* .letter-light-up-0 { animation-delay: 0.0s; } */
+  .letter-light-up-1 { animation-delay: calc(10ms   * var(--delay)); }
+  .letter-light-up-2 { animation-delay: calc(180ms  * var(--delay)); }
+  .letter-light-up-3 { animation-delay: calc(250ms  * var(--delay)); }
+  .letter-light-up-4 { animation-delay: calc(320ms  * var(--delay)); }
+
+  .letter-light-up-5 { animation-delay: calc(370ms  * var(--delay)); }
+  .letter-light-up-6 { animation-delay: calc(420ms  * var(--delay)); }
+  .letter-light-up-7 { animation-delay: calc(470ms  * var(--delay)); }
+
+  .letter-light-up-8 { animation-delay: calc(510ms  * var(--delay)); }
+  .letter-light-up-9 { animation-delay: calc(560ms  * var(--delay)); }
+  .letter-light-up-10 { animation-delay: calc(630ms * var(--delay)); }
+
+  .letter-light-up-11 { animation-delay: calc(680ms * var(--delay)); }
+  .letter-light-up-12 { animation-delay: calc(750ms * var(--delay)); }
+  .letter-light-up-13 { animation-delay: calc(820ms * var(--delay)); }
+  .letter-light-up-14 { animation-delay: calc(900ms * var(--delay)); }
+  .letter-light-up-15 { animation-delay: calc(1s    * var(--delay)); }
 }
 
 @keyframes fadeUp {
@@ -112,6 +138,15 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes letterLightUp {
+  from {
+    color: var(--color-accent);
+  }
+  to {
+    color: var(--color-text);
   }
 }
 
