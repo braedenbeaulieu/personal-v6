@@ -2,7 +2,7 @@
 title: EV Careers
 description: Not-for-profit job platform connecting Windsor-Essex job seekers with careers in the electric vehicle sector, backed by a regional consortium of economic development partners.
 screenshotName: evcareers.ca.webp
-tags: [WordPress]
+tags: [Job Platform, EV Sector]
 liveUrl: https://www.evcareers.ca/
 draft: false
 order: 5

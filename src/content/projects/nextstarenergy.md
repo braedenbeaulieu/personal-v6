@@ -2,7 +2,7 @@
 title: NextStar Energy
 description: Corporate website for Canada's first large-scale lithium-ion battery manufacturer, located in Windsor — powering the shift to electric vehicles.
 screenshotName: nextstar-energy.com.webp
-tags: [WordPress]
+tags: [Manufacturing, Clean Energy]
 liveUrl: https://nextstar-energy.com/
 draft: false
 order: 3

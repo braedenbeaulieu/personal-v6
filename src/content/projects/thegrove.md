@@ -2,7 +2,7 @@
 title: The Grove Collective
 description: Boutique hotel brand website for two personality-driven properties in Essex County — a wine country hotel in Kingsville and a lakeside motel in Colchester.
 screenshotName: thegrove.rocks.webp
-tags: [WordPress]
+tags: [Hospitality, Booking System]
 liveUrl: https://www.thegrove.rocks/
 draft: false
 order: 1

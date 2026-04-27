@@ -2,7 +2,7 @@
 title: The Capitol Theatre Windsor
 description: Website for Windsor's premier performing arts venue — a historic downtown theatre hosting symphony concerts, film screenings, and live performances.
 screenshotName: capitoltheatrewindsor.ca.webp
-tags: [WordPress]
+tags: [Performing Arts, Event Ticketing]
 liveUrl: https://www.capitoltheatrewindsor.ca/
 draft: false
 order: 8

@@ -2,7 +2,7 @@
 title: Windsor-Essex Chamber of Commerce
 description: Website for the regional business advocacy and networking organization representing thousands of members across Windsor-Essex.
 screenshotName: windsoressexchamber.org.webp
-tags: [WordPress]
+tags: [Business Networking, Advocacy]
 liveUrl: https://www.windsoressexchamber.org/
 draft: false
 order: 9

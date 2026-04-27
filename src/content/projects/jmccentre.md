@@ -2,7 +2,7 @@
 title: John McGivney Children's Centre
 description: Website for Windsor-Essex's children's rehabilitation centre, providing child-focused, family-centred care for infants, children, and youth with disabilities.
 screenshotName: jmccentre.ca.webp
-tags: [WordPress]
+tags: [Healthcare, Disability Services]
 liveUrl: https://jmccentre.ca/
 draft: false
 order: 7
