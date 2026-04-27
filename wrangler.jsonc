@@ -1,0 +1,9 @@
+{
+  "name": "braedenbeaulieu-portfolio",
+  "compatibility_date": "2025-04-01",
+  "main": "src/index.ts",
+  "assets": {
+    "directory": "dist"
+  },
+  "binding": "ASSETS"
+}
