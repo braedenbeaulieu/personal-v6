@@ -66,6 +66,18 @@
 }
 
 @layer utilities {
+  .screen-reader-text {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      border: 0;
+      white-space: nowrap;
+  }
+
   .display-text {
     font-size: clamp(3.5rem, 10vw, 9rem);
     font-weight: 900;
